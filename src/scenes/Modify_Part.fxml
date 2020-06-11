@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="371.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="scenes.Modify_PartController">
+  <children>
+    <HBox layoutX="15.0" layoutY="14.0" prefHeight="29.0" prefWidth="338.0">
+      <children>
+        <Label prefHeight="27.0" prefWidth="128.0" text="Modify Part">
+          <font>
+            <Font name="Calibri Bold" size="20.0" />
+          </font>
+        </Label>
+        <RadioButton id="inHouseButton" fx:id="modifyInHouseButton" mnemonicParsing="false" onAction="#ModifyaddPartInHouseRaidoButtonSelect" prefWidth="116.0" text="In-House" />
+        <RadioButton id="outSourcedButton" fx:id="modifyOutSourcedButton" mnemonicParsing="false" onAction="#ModifyaddPartOutSourcedRaidoButtonSelect" prefWidth="112.0" text="Outsourced" />
+      </children>
+    </HBox>
+    <HBox layoutX="23.0" layoutY="84.0" prefHeight="275.0" prefWidth="363.0">
+      <children>
+        <VBox prefHeight="228.0" prefWidth="124.0" spacing="20.0">
+          <children>
+            <Label text="ID">
+              <font>
+                <Font name="Arial" size="15.0" fx:id="x1" />
+              </font>
+            </Label>
+            <Label font="$x1" text="Name" />
+            <Label font="$x1" text="Inv" />
+            <Label font="$x1" text="Price/Count" />
+            <Label font="$x1" text="Max" />
+            <Label id="inORoutLabel" fx:id="modifyInORoutLabel" font="$x1" text="Company Name" />
+          </children>
+        </VBox>
+        <VBox prefHeight="246.0" prefWidth="73.0" spacing="8.0">
+          <children>
+            <TextField id="partId" fx:id="modifyPartId" prefHeight="29.0" prefWidth="130.0" />
+            <TextField id="partName" fx:id="modifyPartName" prefHeight="29.0" prefWidth="130.0" />
+            <TextField id="partInventory" fx:id="modifyPartInventory" prefHeight="29.0" prefWidth="130.0" />
+            <TextField id="partPrice" fx:id="modifyPartPrice" prefHeight="29.0" prefWidth="130.0" />
+            <TextField id="partMax" fx:id="modifyPartMax" prefHeight="29.0" prefWidth="130.0" />
+            <TextField id="inORoutTextBox" fx:id="modifyInORoutTextBox" prefHeight="27.0" prefWidth="130.0" />
+          </children>
+        </VBox>
+        <AnchorPane prefHeight="201.0" prefWidth="169.0">
+          <children>
+            <Label font="$x1" layoutX="18.0" layoutY="156.0" prefWidth="41.0" text="Min" />
+            <TextField id="partMin" fx:id="modifyPartMin" layoutX="54.0" layoutY="151.0" prefHeight="29.0" prefWidth="79.0" />
+            <Button layoutX="3.0" layoutY="230.0" mnemonicParsing="false" onAction="#savePartButtonClick" prefWidth="72.0" text="Save" />
+            <Button layoutX="84.0" layoutY="230.0" mnemonicParsing="false" onAction="#cancelButtonClick" prefWidth="72.0" text="Cancel" />
+          </children>
+        </AnchorPane>
+      </children>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@Main.css" />
+  </stylesheets>
+</AnchorPane>

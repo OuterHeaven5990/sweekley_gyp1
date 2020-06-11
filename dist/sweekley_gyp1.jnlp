@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="sweekley_gyp1.jnlp">
+  <information>
+    <title>sweekley_gyp1</title>
+    <vendor>scott</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\javafx-swt.jar" size="36675" download="eager" />
+    <jar href="lib\javafx.base.jar" size="744512" download="eager" />
+    <jar href="lib\javafx.controls.jar" size="2508818" download="eager" />
+    <jar href="lib\javafx.fxml.jar" size="125617" download="eager" />
+    <jar href="lib\javafx.graphics.jar" size="4289319" download="eager" />
+    <jar href="lib\javafx.media.jar" size="264239" download="eager" />
+    <jar href="lib\javafx.swing.jar" size="87867" download="eager" />
+    <jar href="lib\javafx.web.jar" size="704708" download="eager" />
+    <jar href="sweekley_gyp1.jar" size="33777" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="sweekley_gyp1.Sweekley_gyp1"  name="sweekley_gyp1" />
+  <update check="always"/>
+</jnlp>

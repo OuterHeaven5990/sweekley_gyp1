@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="625.0" prefWidth="1068.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="scenes.ModifyProduct_Controller">
+  <children>
+    <AnchorPane id="customAncor" layoutX="28.0" layoutY="30.0" prefHeight="570.0" prefWidth="1017.0">
+      <children>
+        <TableView id="addProductsTableView" fx:id="ModifyaddProductsTableView" layoutX="451.0" layoutY="109.0" prefHeight="138.00009999999747" prefWidth="436.0001220703125">
+          <columns>
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="85.0" text="Parts ID" fx:id="ModifyaddProductPartID" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="95.0" text="Parts Name" fx:id="ModifyaddProductPartName" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="110.0" text="Inventory Level" fx:id="ModifyaddProductStockLevel" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="141.0" text="Price/Cost per Unit" fx:id="ModifyaddProductPrice" />
+          </columns>
+        </TableView>
+        <Label layoutX="64.0" layoutY="100.0" prefHeight="25.0" prefWidth="127.0" text="Modify Product">
+          <font>
+            <Font name="Arial Bold" size="15.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Button layoutX="544.0" layoutY="78.0" mnemonicParsing="false" onAction="#searchPartButton" prefHeight="22.0" prefWidth="71.0" text="Search" />
+        <TextField id="addProductTableSearchField" fx:id="ModifyaddProductTableSearchField" layoutX="643.0" layoutY="78.0" prefWidth="141.0" />
+        <Button id="addProductsToDeleteTableView" layoutX="773.0" layoutY="255.0" mnemonicParsing="false" onAction="#addPartToProduct" prefWidth="83.0" text="Add">
+          <font>
+            <Font name="Arial" size="15.0" />
+          </font>
+        </Button>
+        <TableView id="addProductsToDeleteTableView" fx:id="ModifyaddProductsToDeleteTableView" layoutX="451.0" layoutY="321.0" prefHeight="138.0" prefWidth="436.0">
+          <columns>
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="85.0" text="Parts ID" fx:id="modifyCurrentProductPartId" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="95.0" text="Parts Name" fx:id="modifyCurrentProductPartName" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="110.0" text="Inventory Level" fx:id="modifyCurrentProductStock" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="141.0" text="Price/Cost per Unit" fx:id="modifyCurrentProductPrice" />
+          </columns>
+        </TableView>
+        <Button layoutX="783.0" layoutY="526.0" mnemonicParsing="false" onAction="#cancelButtonClick" text="Cancel">
+          <font>
+            <Font size="15.0" fx:id="x2" />
+          </font>
+        </Button>
+        <Button font="$x2" layoutX="784.0" layoutY="475.0" mnemonicParsing="false" onAction="#removePartFromProduct" text="Delete" />
+        <Button font="$x2" layoutX="685.0" layoutY="526.0" mnemonicParsing="false" onAction="#saveProductButtonClick" prefWidth="62.0" text="Save" />
+        <Label layoutX="36.0" layoutY="196.0" text="ID">
+          <font>
+            <Font name="Arial Black" size="12.0" fx:id="x3" />
+          </font>
+        </Label>
+        <Label font="$x3" layoutX="36.0" layoutY="238.0" text="Name" />
+        <Label font="$x3" layoutX="36.0" layoutY="275.0" text="Inv" />
+        <Label font="$x3" layoutX="34.0" layoutY="316.0" text="Price" />
+        <Label font="$x3" layoutX="31.0" layoutY="356.0" text="Max" />
+        <Label font="$x3" layoutX="191.0" layoutY="357.0" text="Min" />
+        <TextField fx:id="productId" layoutX="103.0" layoutY="188.0" prefHeight="27.0" prefWidth="141.0" />
+        <TextField id="productName" fx:id="modifyProductName" layoutX="103.0" layoutY="234.0" prefHeight="27.0" prefWidth="141.0" />
+        <TextField id="productInventory" fx:id="modifyProductInventory" layoutX="103.0" layoutY="272.0" prefHeight="27.0" prefWidth="62.0" />
+        <TextField id="productPrice" fx:id="modifyProductPrice" layoutX="103.0" layoutY="311.0" prefHeight="27.0" prefWidth="62.0" />
+        <TextField id="productMax" fx:id="modifyProductMax" layoutX="103.0" layoutY="351.0" prefHeight="27.0" prefWidth="62.0" />
+        <TextField id="productMin" fx:id="modifyProductMin" layoutX="244.0" layoutY="352.0" prefHeight="27.0" prefWidth="62.0" />
+      </children>
+    </AnchorPane>
+  </children>
+  <stylesheets>
+    <URL value="@Main.css" />
+  </stylesheets>
+</AnchorPane>
